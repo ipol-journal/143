@@ -10,8 +10,8 @@ COPY . .
 
 WORKDIR $bin/src
 RUN cmake CMakeLists.txt
-WORKDIR $bin
-COPY . .
+#WORKDIR $bin
+#COPY . .
 RUN make
 WORKDIR $bin/bin
 RUN cp homography orsa rectify convert density medianFill mesh selfSimilar showRect sift size stereoAC subPixel $bin
